@@ -1,0 +1,55 @@
+{
+  "name": "design-library",
+  "version": "0.1.0",
+  "description": "A clean, variant-based React component library",
+  "author": "hsneden",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run type-check"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "ts-jest": "^29.1.4",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
+  },
+  "keywords": [
+    "react",
+    "component-library",
+    "design-system",
+    "typescript",
+    "ui"
+  ]
+}
