@@ -8,16 +8,20 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | null>(null)
 
 const toTokens = (theme: Theme): Record<string, string> => ({
+  '--dl-color-canvas': theme.colors.canvas,
   '--dl-color-bg': theme.colors.bg,
   '--dl-color-fg': theme.colors.fg,
   '--dl-color-muted': theme.colors.muted,
   '--dl-color-border': theme.colors.border,
   '--dl-color-border-hover': theme.colors.borderHover,
   '--dl-color-accent': theme.colors.accent,
+  '--dl-color-accent-hover': theme.colors.accentHover,
   '--dl-color-accent-fg': theme.colors.accentFg,
+  '--dl-color-link': theme.colors.link,
   '--dl-color-surface': theme.colors.surface,
   '--dl-color-surface-hover': theme.colors.surfaceHover,
   '--dl-color-error': theme.colors.error,
+  '--dl-color-warning': theme.colors.warning,
   '--dl-color-success': theme.colors.success,
   '--dl-font-sans': theme.fonts.sans,
   '--dl-font-serif': theme.fonts.serif,
@@ -49,7 +53,7 @@ export const ThemeProvider = ({ theme, children }: ThemeProviderProps) => {
 
   return (
     <ThemeContext.Provider value={contextValue}>
-      <div style={tokens as React.CSSProperties}>{children}</div>
+      <div style={{ ...(tokens as React.CSSProperties), background: 'var(--dl-color-canvas)' }}>{children}</div>
     </ThemeContext.Provider>
   )
 }

@@ -34,7 +34,7 @@ const buttonCSS = `
   color: var(--dl-color-accent-fg);
   border-color: var(--dl-color-accent);
 }
-.dl-button--primary:hover:not(:disabled) { opacity: 0.8; }
+.dl-button--primary:hover:not(:disabled) { background: var(--dl-color-accent-hover); border-color: var(--dl-color-accent-hover); }
 .dl-button--secondary {
   background: var(--dl-color-surface);
   color: var(--dl-color-fg);

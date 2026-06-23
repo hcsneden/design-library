@@ -3,16 +3,20 @@ import type { Theme } from '../types'
 export const monochrome: Theme = {
   name: 'monochrome',
   colors: {
+    canvas: '#ffffff',
     bg: '#ffffff',
     fg: '#0a0a0a',
     muted: '#737373',
     border: '#e5e5e5',
     borderHover: '#a3a3a3',
     accent: '#0a0a0a',
+    accentHover: '#262626',
     accentFg: '#ffffff',
+    link: '#0a0a0a',
     surface: '#f5f5f5',
     surfaceHover: '#ebebeb',
     error: '#dc2626',
+    warning: '#b45309',
     success: '#16a34a',
   },
   fonts: {

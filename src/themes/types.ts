@@ -1,14 +1,18 @@
 export interface ThemeColors {
+  canvas: string
   bg: string
   fg: string
   muted: string
   border: string
   borderHover: string
   accent: string
+  accentHover: string
   accentFg: string
+  link: string
   surface: string
   surfaceHover: string
   error: string
+  warning: string
   success: string
 }
 
