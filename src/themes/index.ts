@@ -1,4 +1,5 @@
 export { ThemeProvider, useThemeContext } from './ThemeProvider'
 export { useTheme } from './useTheme'
 export { monochrome } from './variants/monochrome'
+export { trailhead } from './variants/trailhead'
 export type { Theme, ThemeColors, ThemeFonts, ThemeRadius, ThemeShadows, ThemeFontSizes } from './types'
